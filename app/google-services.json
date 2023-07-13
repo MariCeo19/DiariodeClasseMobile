@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "837973219605",
+    "project_id": "diariodeclasse-8ce92",
+    "storage_bucket": "diariodeclasse-8ce92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837973219605:android:b8720537de63c398a4311c",
+        "android_client_info": {
+          "package_name": "com.example.diariodeclasse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837973219605-2nnprl0hdb9q6pascj6k55visclond4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg_jGT4ioO1w41pgRnpzd4VwK-E_9w91w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837973219605-2nnprl0hdb9q6pascj6k55visclond4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837973219605:android:2e6586d639aa662ea4311c",
+        "android_client_info": {
+          "package_name": "com.example.diariodeclassemobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837973219605-2nnprl0hdb9q6pascj6k55visclond4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg_jGT4ioO1w41pgRnpzd4VwK-E_9w91w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837973219605-2nnprl0hdb9q6pascj6k55visclond4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

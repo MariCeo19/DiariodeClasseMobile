@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Diario de Classe Mobile</string>
+    <string name="nome_do_aluno">Nome Do Aluno</string>
+    <string name="titulo_do_curso">Título do Curso</string>
+</resources>
