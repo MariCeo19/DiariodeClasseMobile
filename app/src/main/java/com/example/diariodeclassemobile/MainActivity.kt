@@ -54,7 +54,7 @@ fun AppDiarioDeClasse(){
         composable(
             route = "telaCadastroDeAluno"
         ){
-            TelaCadastroAluno(controleDeNavegacao)
+            TelaCadastroAluno(controleDeNavegacao,)
         }
     }
 

@@ -1,10 +1,7 @@
 package com.example.diariodeclassemobile.telas
 
 import android.content.Context
-import android.net.Uri
 import android.widget.Toast
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,9 +20,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
@@ -38,9 +32,6 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import coil.compose.rememberAsyncImagePainter
-import com.android.volley.toolbox.ImageRequest
-import com.example.diariodeclassemobile.R
 import com.example.diariodeclassemobile.ui.telaDeLogin.TelaDeLoginUiState
 import com.example.diariodeclassemobile.ui.telaDeLogin.TelaDeLoginViewModel
 
@@ -89,7 +80,7 @@ fun TelaLogin(
                 )
             }
         }
-        if(!telaDeLoginUiState.cadstro) {
+        if(!telaDeLoginUiState.cadastro) {
             Text(
                 text = "Criar nova conta",
                 modifier = Modifier.clickable {
@@ -109,7 +100,7 @@ private fun BotaoLogin(
 ) {
     Button(
         onClick = {
-            if(telaDeLoginUiState.cadstro)
+            if(telaDeLoginUiState.cadastro)
                 telaDeLoginViewModel.criarUsuario()
             else
                 telaDeLoginViewModel.logarUsuario()
@@ -117,7 +108,7 @@ private fun BotaoLogin(
         modifier = Modifier.fillMaxWidth()
     ) {
         Text(text =
-            if(telaDeLoginUiState.cadstro)
+            if(telaDeLoginUiState.cadastro)
                 "Cadastrar"
             else
                 "Entrar"
@@ -159,7 +150,7 @@ fun CamposDeTexto(
         value = telaDeLoginViewModel.email,
         onValueChange = {
             telaDeLoginViewModel.updateEmail(it)
-            telaDeLoginViewModel.updateLogin(cadastro = telaDeLoginUiState.cadstro)
+            telaDeLoginViewModel.updateLogin(cadastro = telaDeLoginUiState.cadastro)
         },
         label =  { Text(text = "Email") },
         modifier = Modifier.fillMaxWidth(),
@@ -181,7 +172,7 @@ fun CamposDeTexto(
         value = telaDeLoginViewModel.senha,
         onValueChange = {
             telaDeLoginViewModel.updateSenha(it)
-            telaDeLoginViewModel.updateLogin(cadastro = telaDeLoginUiState.cadstro)
+            telaDeLoginViewModel.updateLogin(cadastro = telaDeLoginUiState.cadastro)
         },
         label = { Text(text = "Senha") },
         modifier = Modifier.fillMaxWidth(),
@@ -200,13 +191,13 @@ fun CamposDeTexto(
         isError = telaDeLoginUiState.emailSenhaIncorretos
     )
 
-    if(telaDeLoginUiState.cadstro) {
+    if(telaDeLoginUiState.cadastro) {
 
         OutlinedTextField(
             value = telaDeLoginViewModel.confirmarSenha,
             onValueChange = {
                 telaDeLoginViewModel.updateConfirmarSenha(it)
-                telaDeLoginViewModel.updateLogin(cadastro = telaDeLoginUiState.cadstro)
+                telaDeLoginViewModel.updateLogin(cadastro = telaDeLoginUiState.cadastro)
             },
             label = { Text(text = "Confirmar Senha") },
             modifier = Modifier.fillMaxWidth(),

@@ -6,9 +6,11 @@ import com.example.diariodeclassemobile.model.Aluno
 public class ListaDeAlunos {
     fun carregarListaDeAlunos():List<Aluno>{
         return listOf<Aluno>(
-            Aluno("Rafael", "Eletronica"),
-            Aluno("Gislene", "ADM"),
-            Aluno("Lara", "Designer"),
+            Aluno("Karolyne", "Eletronica"),
+            Aluno("João", "ADM"),
+            Aluno("Rebeka", "Designer"),
+            Aluno("Cristina", "ADM"),
+            Aluno("Roberta", "Eletronica"),
         )
     }
 }

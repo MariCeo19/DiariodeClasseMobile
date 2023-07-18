@@ -181,7 +181,7 @@ fun FotoPerfil(
         modifier = Modifier
             .size(150.dp)
             .border(
-                BorderStroke(4.dp, Color.Black),
+                BorderStroke(4.dp, Color.Magenta),
                 CircleShape
             )
             .clip(CircleShape),

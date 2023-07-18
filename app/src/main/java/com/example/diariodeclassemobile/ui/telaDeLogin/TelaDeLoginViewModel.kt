@@ -4,7 +4,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.diariodeclassemobile.model.Aluno
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -52,7 +51,7 @@ class TelaDeLoginViewModel:ViewModel() {
             currentState.copy(
                 status = logado,
                 emailSenhaIncorretos = bordaVermelha,
-                cadstro = cadastro
+                cadastro = cadastro
             )
         }
     }

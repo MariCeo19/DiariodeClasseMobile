@@ -10,5 +10,5 @@ data class TelaDeLoginUiState (
     val status:Boolean = false,
     val emailSenhaIncorretos:Boolean = false,
     val labelSenha:String = "Senha",
-    val cadstro:Boolean = false
+    val cadastro:Boolean = false
 )
